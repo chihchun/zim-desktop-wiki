@@ -300,7 +300,8 @@ def _link_tree(links, notebook, path):
 			if type == 'page':
 				target = Path(Path.makeValidPageName(link)) # Assume links are always absolute
 				href = notebook.pages.create_link(path, target)
-				link = href.to_wiki_link()
+				# preferred to copy absolute link
+				# link = href.to_wiki_link()
 			elif type == 'file':
 				file = File(link) # Assume links are always URIs
 				link = notebook.relative_filepath(file, path) or file.uri
