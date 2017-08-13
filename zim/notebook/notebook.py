@@ -796,6 +796,8 @@ class Notebook(ConnectorMixin, SignalEmitter):
 		else:
 			newhref = self.pages.create_link(source, target)
 
+		# prefer to keep absolute links
+		newhref = HRef(HREF_REL_ABSOLUTE, target.name)
 		text = newhref.to_wiki_link()
 		if elt.gettext() == elt.get('href'):
 			elt[:] = [text]
