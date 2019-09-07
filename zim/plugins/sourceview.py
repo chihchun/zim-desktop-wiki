@@ -110,7 +110,7 @@ class SourceViewObjectType(InsertedObjectTypeExtension):
 
 	object_attr = {
 		'lang': String(None),
-		'linenumbers': Boolean(True),
+		'linenumbers': Boolean(False),
 	}
 
 	def __init__(self, plugin, objmap):
