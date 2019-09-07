@@ -17,6 +17,8 @@ Recommends: python3-gtkspellcheck
 # scrot required for the screenshot plugin
 # dvipng required for the "equation" plugin
 Suggests: git, graphviz, scrot, dvipng
+# libgail-common does not work well with large gtktree.
+Conflicts: libgail-common
 Description: Desktop Wiki Editor
  Zim is a graphical text editor used to maintain a collection of wiki pages.
  Each page can contain links to other pages, simple formatting and images.
