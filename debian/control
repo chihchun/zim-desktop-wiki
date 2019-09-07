@@ -11,7 +11,7 @@ Architecture: all
 Homepage: https://zim-wiki.org/
 Depends: ${python3:Depends}, ${misc:Depends}, python3 (>= 3.2), libgtk-3-0 (>= 3.18), gir1.2-gtk-3.0, python3-gi, python3-xdg
 # python-gtkspell required for the spell checker plugin
-# Recommends: python-gtkspellcheck
+Recommends: python3-gtkspellcheck
 # graphviz required for the link map/diagram plugins
 # git or similar required for the version control plugin
 # scrot required for the screenshot plugin
