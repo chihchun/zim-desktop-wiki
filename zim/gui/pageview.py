@@ -1026,6 +1026,7 @@ class TextBuffer(Gtk.TextBuffer):
 		assert isinstance(href, str) or href is None
 
 		tag = self.create_tag(None, **self.tag_styles['link'])
+		tag.set_priority(0) # force tags to be below styles
 		tag.zim_type = 'link'
 		tag.zim_tag = 'link'
 		tag.zim_attrib = attrib
